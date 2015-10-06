@@ -17,15 +17,15 @@
 			<h2>Student Directory</h2>
 		</div>
 		<div class="well container form-inline" style="text-align: center;" ng-show="vm.creatingUser">
-			<input class="form-control" placeholder="Name..." ng-model="vm.studentName">
-			<input class="form-control" placeholder="Major..." ng-model="vm.studentMajor">
-			<input class="form-control" placeholder="Email..." ng-model="vm.studentEmail">
-			<input class="form-control" placeholder="Affiliations..." ng-model="vm.studentOrganization">
+			<input class="form-control" placeholder="Name..." ng-model="vm.newUser.name">
+			<input class="form-control" placeholder="Major..." ng-model="vm.newUser.major">
+			<input class="form-control" placeholder="Email..." ng-model="vm.newUser.email">
+			<input class="form-control" placeholder="Affiliations..." ng-model="vm.newUser.organization">
 			<button type="button" class="btn btn-success" ng-click="vm.saveUser();">Submit</button>
 			<button type="button" class="btn btn-danger" ng-click="vm.creatingUser = false;">Cancel</button>
 		</div>
 
-		<div ng-repeat="c in vm.contacts";"c in vm.contacts track by $index">
+		<div ng-repeat="c in vm.contacts track by $index">
 			<div class="well container">
 				<h3><b>{{c.name}}</b></h3>
 				<h4><b>Major:</b> {{c.major}}</h4>
