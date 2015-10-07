@@ -1,0 +1,11 @@
+<h1>Add User Page</h1>
+<div ng-controller="AddUserController as vm">
+  <form class="well container" ng-submit="vm.saveUser()" style="text-align: center;">
+		<input class="form-control" placeholder="Name..." ng-model="vm.contact.name">
+		<input class="form-control" placeholder="Major..." ng-model="vm.contact.major">
+		<input class="form-control" placeholder="Email..." ng-model="vm.contact.email">
+		<input class="form-control" placeholder="Affiliations..." ng-model="vm.contact.organization">
+		<button type="submit" class="btn btn-success" >Submit</button>
+		<a class="btn btn-danger" ui-sref="Home">Cancel</a>
+	</form>
+</div>

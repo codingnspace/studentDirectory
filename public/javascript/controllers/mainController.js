@@ -1,6 +1,4 @@
-angular.module("StudentDirectory", ['ui.router']).config(function(){
-
-]).controller("MainController", function($http) {
+angular.module("StudentDirectory").controller("MainController", function($http) {
 //this is pointing to the controller vm stands for view model
   var vm = this;
   //vm.contacts = [

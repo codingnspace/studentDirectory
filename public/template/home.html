@@ -1,0 +1,21 @@
+<div ng-controller="MainController as vm">
+	<div style="text-align: center;" ng-show="!vm.creatingUser">
+    <a class="btn btn-success" ui-sref="AddUser">Create a User</a>
+	</div>
+	<div>
+		<h2>Student Directory</h2>
+	</div>
+
+
+	<div ng-repeat="c in vm.contacts track by $index">
+		<div class="well container">
+			<h3><b>{{c.name}}</b></h3>
+			<h4><b>Major:</b> {{c.major}}</h4>
+			<h4><b>Email:</b> {{c.email}}</h4>
+			<h4><b>Affiliations:</b> {{c.organization}}</h4>
+
+      <a class="btn btn-info" ui-sref="EditContact({id: c._id})">Edit</a>
+			<button type="button" class="btn btn-danger" ng-click="vm.deleteUser(c);">Delete</button>
+		</div>
+	</div>
+</div>

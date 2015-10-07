@@ -1,0 +1,19 @@
+<h1>Edit Page</h1>
+<div ng-controller="EditContactController as vm">
+  <div style="text-align:center;">
+    <a ui-sref="Home" class="btn btn-success">Home</a>
+  </div>
+  <form class="well container" ng-submit="vm.editContact()" style="text-align: center;">
+    <label>Name</label>
+    <input class="form-control" placeholder="Name..." ng-model="vm.contact.name" required>
+    <label>Major</label>
+    <input class="form-control" placeholder="Major..." ng-model="vm.contact.major" required>
+    <label>Email</label>
+    <input class="form-control" type = "email" placeholder="Email..." ng-model="vm.contact.email" required>
+    <label>Affiliations</label>
+    <input class="form-control" placeholder="Affiliations..." ng-model="vm.contact.organization" required>
+    <button type="submit" class="btn btn-info" ng-disabled="!vm.contact.name || !vm.contact.major ||
+    !vm.contact.email || !vm.contact.organization" >Submit</button>
+
+  </form>
+</div>

@@ -1,4 +1,6 @@
-angular.module("StudentDirectory", []).controller("MainController", function($scope) {
+angular.module("StudentDirectory", ['ui.router']).config(function(){
+
+}).controller("MainController", function($scope) {
   $scope.contacts = [
       {name:'Maya Basquin', organization: 'Engineers Without Borders', major:'Industrial Engineering', email: 'mbasquin@gmail.com'},
       {name:'Summer Pearsons', organization: 'Society of Women Engineers', major:'Environmental Engineering', email:'summer90@gmail.com'},
