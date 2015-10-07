@@ -1,6 +1,9 @@
-angular.module("StudentDirectory").controller("MainController", function($http) {
+angular.module("StudentDirectory").controller("MainController",
+function($http, ContactService) {
 //this is pointing to the controller vm stands for view model
   var vm = this;
+  vm.test = ContactService.test;
+
   //vm.contacts = [
     // {name:'Maya Basquin', organization: 'Engineers Without Borders', major:'Industrial Engineering', email: 'mbasquin@gmail.com'},
       //{name:'Summer Pearsons', organization: 'Society of Women Engineers', major:'Environmental Engineering', email:'summer90@gmail.com'},
